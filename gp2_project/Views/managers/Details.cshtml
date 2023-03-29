@@ -1,0 +1,48 @@
+﻿@model gp2_project.Models.manager
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>manager</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.role)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.role)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.phoneNo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.phoneNo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

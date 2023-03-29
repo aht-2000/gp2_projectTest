@@ -1,0 +1,49 @@
+﻿@model gp2_project.Models.payment
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>payment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="orderNo" class="control-label"></label>
+                <input asp-for="orderNo" class="form-control" />
+                <span asp-validation-for="orderNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nameOnCard" class="control-label"></label>
+                <input asp-for="nameOnCard" class="form-control" />
+                <span asp-validation-for="nameOnCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bankAccNo" class="control-label"></label>
+                <input asp-for="bankAccNo" class="form-control" />
+                <span asp-validation-for="bankAccNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="total" class="control-label"></label>
+                <input asp-for="total" class="form-control" />
+                <span asp-validation-for="total" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

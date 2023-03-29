@@ -1,0 +1,48 @@
+﻿@model gp2_project.Models.recycleCompanies
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>recycleCompanies</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.emai)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.emai)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.role)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.role)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.companyName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.companyName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.companyNo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.companyNo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

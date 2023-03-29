@@ -1,0 +1,36 @@
+﻿@model gp2_project.Models.orders
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>orders</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.orderNo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.orderNo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.orderQty)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.orderQty)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.orderWeight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.orderWeight)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

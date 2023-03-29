@@ -1,0 +1,32 @@
+﻿@{
+	ViewData["Title"] = "Login";
+}
+
+@{
+    //Layout = "~/Views/Shared/LoginLayout.cshtml";
+}
+
+<body>
+	<form asp-action="Login">
+		<div class="form-group">
+			<div class="containers">
+				<h1 id="loginText">Login</h1>
+				<input type="text" name="na" placeholder="Enter Your Username" id="username">
+				<br>
+				<input type="password" name="pa" placeholder="Enter Your Password" required id="password">
+				<br>
+				<input type="submit" value="Login" id="login">
+				<br>
+				<span style="color: blue">Remember me</span>
+				<input type="checkbox" id="remember">
+				<br>
+				<p style="font-size:13px; color: rgb(255, 85, 0)">
+					Not Registered? <a asp-area="" asp-controller="Users" asp-action="Create" style="color:orange;">
+						Create Account
+					</a>
+				</p>
+				<p style="color:red"> @ViewData["message"]</p>
+			</div>
+		</div>
+	</form>
+</body>
